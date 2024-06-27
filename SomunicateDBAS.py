@@ -110,6 +110,8 @@ else:
         # construct the full path of the sound file
         sound_file_path = os.path.join(audio_files_dir, sound_file_name)
 
+        st.write(sound_file_path)
+
         if os.path.exists(sound_file_path):
             # read the audio file as binary
             audio_file = open(sound_file_path, 'rb').read()
