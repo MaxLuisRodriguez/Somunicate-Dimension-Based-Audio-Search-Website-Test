@@ -16,13 +16,13 @@ import streamlit.components.v1 as components
 import numpy as np
 import base64
 
-st.markdown("<center><h1 style='color: violet;'>Welcome to the Somunicate Audio Finder</h1></center>", unsafe_allow_html=True)
+st.markdown("<center><h1 style='color: violet;'>Welcome to Somunicate Audio Search</h1></center>", unsafe_allow_html=True)
 
 # Description section
 st.markdown("<p style='font-size: 1.2em;'>Our audio search algorithm is designed to help you find a sound tailored to your preferences.</p>", unsafe_allow_html=True)
 
 # How It Works section
-st.markdown("<h2 style='font-size: 2em; color: #2196F3;'>How It Works:</h2>", unsafe_allow_html=True)
+st.markdown("<center><h2 style='font-size: 2em; color: #2196F3;'>How It Works:</h2></center>", unsafe_allow_html=True)
 st.markdown("<ol style='font-size: 1.2em;'>", unsafe_allow_html=True)
 st.markdown("<li><strong>Select Your Dimensions:</strong> Choose from 19 distinct sound dimensions, each capturing a unique aspect of audio quality.</li>", unsafe_allow_html=True)
 st.markdown("<li><strong>Rate Each Dimension:</strong> Provide your ratings for each chosen dimension on a scale from -1 to 1:</li>", unsafe_allow_html=True)
