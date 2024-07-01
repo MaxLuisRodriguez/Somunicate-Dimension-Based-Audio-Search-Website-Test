@@ -159,8 +159,8 @@ def get_bilingual_dimension(dimension, dimension_translations):
     return f"{dimension} ({dimension_translations[dimension]})"
 
 # Add markdown to enhance text display
-st.markdown("<center><h3 style='color: yellow;'>Select from the dimensions shown in the following list:</p></h3></center>", unsafe_allow_html=True)
-st.markdown("<center><h4 style='color: NavajoWhite;'>Wählen Sie aus den in der folgenden Liste angezeigten Dimensionen:</p></h4></center>", unsafe_allow_html=True)
+st.markdown("<center><h3 style='color: tomato;'>Select from the dimensions shown in the following list:</p></h3></center>", unsafe_allow_html=True)
+st.markdown("<center><h4 style='color: orange;'>Wählen Sie aus den in der folgenden Liste angezeigten Dimensionen:</p></h4></center>", unsafe_allow_html=True)
 
 # Display checkboxes for each dimension
 selected_dimensions = []
@@ -174,9 +174,9 @@ if num_dim == 0:
     st.warning("Please select at least 1 dimension. (Bitte wählen Sie mindestens 1 Dimension aus)")
 else:
     if num_dim > 1:
-        st.markdown(f"<center><p style='color: lime;'>You have selected {num_dim} dimensions. (Sie haben {num_dim} Dimensionen ausgewählt)</p></center>", unsafe_allow_html=True)
+        st.markdown(f"<center><p style='color: green;'>You have selected {num_dim} dimensions. (Sie haben {num_dim} Dimensionen ausgewählt)</p></center>", unsafe_allow_html=True)
     else:
-        st.markdown(f"<center><p style='color: lime;'>You have selected {num_dim} dimension. (Sie haben {num_dim} Dimension ausgewählt)</p></center>", unsafe_allow_html=True)
+        st.markdown(f"<center><p style='color: green;'>You have selected {num_dim} dimension. (Sie haben {num_dim} Dimension ausgewählt)</p></center>", unsafe_allow_html=True)
 
 # user input for the selected dimensions using sliders
 user_ratings = []
