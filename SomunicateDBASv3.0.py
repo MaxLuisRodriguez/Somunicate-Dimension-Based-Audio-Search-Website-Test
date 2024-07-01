@@ -16,7 +16,7 @@ import streamlit.components.v1 as components
 import numpy as np
 import base64
 
-st.markdown("<h1 style='color: violet;'>Welcome to the Somunicate Audio Finder</h1>", width=400, unsafe_allow_html=True)
+st.markdown("<center><h1 style='color: violet;'>Welcome to the Somunicate Audio Finder</h1></center>", unsafe_allow_html=True)
 
 # Description section
 st.markdown("<p style='font-size: 1.2em;'>Our audio search algorithm is designed to help you find a sound tailored to your preferences.</p>", unsafe_allow_html=True)
