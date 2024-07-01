@@ -215,7 +215,7 @@ if len(user_ratings) > 0:
             </head>
             <body>
                 <audio id="audioPlayerEuclidean" src="data:audio/mp3;base64,{audio_base64_euclidean}" type="audio/mpeg" controls></audio>   
-                <button onclick="document.getElementById('audioPlayerEuclidean').play()" style="background-color: MediumOrchid; color: white; font-size: 16px; padding: 10px 20px; width: 200px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);">Play Euclidean Audio</button>
+                <button onclick="document.getElementById('audioPlayerEuclidean').play()" style="background-color: MediumOrchid; color: white; font-size: 16px; padding: 10px 20px; width: 200px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); border-radius: 12px;">Play Euclidean Audio</button>
             </body>
         </html>
         """
@@ -250,7 +250,7 @@ if len(user_ratings) > 0:
             </head>
             <body>
                 <audio id="audioPlayerMahalanobis" src="data:audio/mp3;base64,{audio_base64_mahalanobis}" type="audio/mpeg" controls></audio>   
-                <button onclick="document.getElementById('audioPlayerMahalanobis').play()" style="background-color: CornflowerBlue; color: white; font-size: 16px; padding: 10px 20px; width: 200px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);">Play Mahalanobis Audio</button>
+                <button onclick="document.getElementById('audioPlayerMahalanobis').play()" style="background-color: CornflowerBlue; color: white; font-size: 16px; padding: 10px 20px; width: 200px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); border-radius: 12px;">Play Mahalanobis Audio</button>
             </body>
         </html>
         """
