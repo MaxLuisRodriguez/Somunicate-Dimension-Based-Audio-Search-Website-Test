@@ -174,9 +174,9 @@ if num_dim == 0:
     st.warning("Please select at least 1 dimension. (Bitte wählen Sie mindestens 1 Dimension aus)")
 else:
     if num_dim > 1:
-        st.markdown(f"<p style='color: lime;'>You have selected {num_dim} dimensions. (Sie haben {num_dim} Dimensionen ausgewählt)</p>", unsafe_allow_html=True)
+        st.markdown(f"<center><p style='color: lime;'>You have selected {num_dim} dimensions. (Sie haben {num_dim} Dimensionen ausgewählt)</p></center>", unsafe_allow_html=True)
     else:
-        st.markdown(f"<p style='color: lime;'>You have selected {num_dim} dimension. (Sie haben {num_dim} Dimension ausgewählt)</p>", unsafe_allow_html=True)
+        st.markdown(f"<center><p style='color: lime;'>You have selected {num_dim} dimension. (Sie haben {num_dim} Dimension ausgewählt)</p></center>", unsafe_allow_html=True)
 
 # user input for the selected dimensions using sliders
 user_ratings = []
@@ -216,7 +216,7 @@ if len(user_ratings) > 0:
             <body>
                 <audio id="audioPlayerEuclidean" src="data:audio/mp3;base64,{audio_base64_euclidean}" type="audio/mpeg" controls></audio>
             <center>    
-                <button onclick="document.getElementById('audioPlayerEuclidean').play()" style="background-color: MediumOrchid; color: white;">Play Euclidean Audio</button>
+                <button onclick="document.getElementById('audioPlayerEuclidean').play()" style="background-color: MediumOrchid; color: white; font-size: 16px; padding: 10px 20px; width: 200px;">Play Euclidean Audio</button>
             </center>
             </body>
         </html>
@@ -253,7 +253,7 @@ if len(user_ratings) > 0:
             <body>
                 <audio id="audioPlayerMahalanobis" src="data:audio/mp3;base64,{audio_base64_mahalanobis}" type="audio/mpeg" controls></audio>
             <center>    
-                <button onclick="document.getElementById('audioPlayerMahalanobis').play()" style="background-color: CornflowerBlue; color: white;">Play Mahalanobis Audio</button>
+                <button onclick="document.getElementById('audioPlayerMahalanobis').play()" style="background-color: CornflowerBlue; color: white; font-size: 16px; padding: 10px 20px; width: 200px;">Play Mahalanobis Audio</button>
             </center>
             </body>
         </html>
