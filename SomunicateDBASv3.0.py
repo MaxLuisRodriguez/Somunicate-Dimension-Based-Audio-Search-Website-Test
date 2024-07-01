@@ -160,7 +160,7 @@ def get_bilingual_dimension(dimension, dimension_translations):
 
 # Add markdown to enhance text display
 st.markdown("<center><h3 style='color: yellow;'>Select from the dimensions shown in the following list:</p></h3></center>", unsafe_allow_html=True)
-st.markdown("<center><h4 style='color: yellow;'>Wählen Sie aus den in der folgenden Liste angezeigten Dimensionen:</p></h4></center>", unsafe_allow_html=True)
+st.markdown("<center><h4 style='color: NavajoWhite;'>Wählen Sie aus den in der folgenden Liste angezeigten Dimensionen:</p></h4></center>", unsafe_allow_html=True)
 
 # Display checkboxes for each dimension
 selected_dimensions = []
