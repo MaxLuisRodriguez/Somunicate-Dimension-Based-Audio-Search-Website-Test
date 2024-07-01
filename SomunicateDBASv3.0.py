@@ -16,6 +16,28 @@ import streamlit.components.v1 as components
 import numpy as np
 import base64
 
+st.markdown("<h1 style='color: violet;'>Welcome to the Audio Finder</h1>", unsafe_allow_html=True)
+
+# Description section
+st.markdown("<p style='font-size: 1.2em;'>Our audio search algorithm is designed to help you find a sound tailored to your preferences.</p>", unsafe_allow_html=True)
+
+# How It Works section
+st.markdown("<h2 style='font-size: 2em; color: #2196F3;'>How It Works:</h2>", unsafe_allow_html=True)
+st.markdown("<ol style='font-size: 1.2em;'>", unsafe_allow_html=True)
+st.markdown("<li><strong>Select Your Dimensions:</strong> Choose from 19 distinct sound dimensions, each capturing a unique aspect of audio quality.</li>", unsafe_allow_html=True)
+st.markdown("<li><strong>Rate Each Dimension:</strong> Provide your ratings for each chosen dimension on a scale from -1 to 1:</li>", unsafe_allow_html=True)
+st.markdown("<ul>", unsafe_allow_html=True)
+st.markdown("<li><strong>-1:</strong> Completely opposite of the selected dimension</li>", unsafe_allow_html=True)
+st.markdown("<li><strong>0:</strong> Neutral or indifferent</li>", unsafe_allow_html=True)
+st.markdown("<li><strong>1:</strong> The epitome of the selected dimension</li>", unsafe_allow_html=True)
+st.markdown("</ul>", unsafe_allow_html=True)
+st.markdown("<li><strong>Receive Your Match:</strong> This algorithm identifies the closest sound to your ratings using two different mathematical techniques:</li>", unsafe_allow_html=True)
+st.markdown("<ul>", unsafe_allow_html=True)
+st.markdown("<li><strong>Euclidean Distance:</strong> A simple yet effective method that calculates the closest match based on direct distance measurements.</li>", unsafe_allow_html=True)
+st.markdown("<li><strong>Mahalanobis Distance:</strong> A more sophisticated method that considers correlations between dimensions for a more accurate match.</li>", unsafe_allow_html=True)
+st.markdown("</ul>", unsafe_allow_html=True)
+st.markdown("</ol>", unsafe_allow_html=True)
+
 # Function Header: loads the csv file data into two lists,
 # one including all of the data from the file, and one including only
 # the rating data found in the last 19 columns of the data file
@@ -137,7 +159,6 @@ def get_bilingual_dimension(dimension, dimension_translations):
     return f"{dimension} ({dimension_translations[dimension]})"
 
 # Add markdown to enhance text display
-st.markdown("<h1 style='color: violet;'>Welcome to the Audio Finder</h1>", unsafe_allow_html=True)
 st.markdown("<p style='color: NavajoWhite;'>Select from the dimensions shown in the following list:</p>", unsafe_allow_html=True)
 st.markdown("<p style='color: NavajoWhite;'>Wählen Sie aus den in der folgenden Liste angezeigten Dimensionen:</p>", unsafe_allow_html=True)
 
