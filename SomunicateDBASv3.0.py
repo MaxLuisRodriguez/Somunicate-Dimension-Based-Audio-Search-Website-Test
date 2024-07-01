@@ -19,7 +19,7 @@ import base64
 st.markdown("<center><h1 style='color: violet;'>Welcome to Somunicate Audio Search</h1></center>", unsafe_allow_html=True)
 
 # Description section
-st.markdown("<p style='font-size: 1.2em;'>An audio search algorithm designed to help you find a sound tailored to your preferences.</p>", unsafe_allow_html=True)
+st.markdown("<center><p style='font-size: 1.2em;'>An audio search algorithm designed to help you find a sound tailored to your preferences.</p></center>", unsafe_allow_html=True)
 
 # How It Works section
 st.markdown("<center><h2 style='font-size: 2em; color: #2196F3;'>How It Works:</h2></center>", unsafe_allow_html=True)
