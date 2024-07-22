@@ -405,15 +405,25 @@ class SomunicateApp:
         with st.expander("Demographic Options"):
             # display demographic parameter selection based on sex, migration background, and age
             selected_params = {}
+            age_range_key = {
+                "Age Group 1": "Ages 18-35",
+                "Age Group 2": "Ages 36-54",
+                "Age Group 3": "Ages 55+"
+            }
             for param in groupID_params:
                 st.markdown(f"<center><h3 style='color: #8A2BE2;'>{param}</h3></center>", unsafe_allow_html=True)
                 selected_options = []
                 for option in params[param]:
-                    params[param][option] = st.checkbox(option, value=params[param][option])
-                    if params[param][option]:
-                        selected_options.append(option)
-                    if option == "Male":
-                        st.checkbox("Non-Binary")
+                    if param == "Age":
+                        params[param][option] = st.checkbox(age_range_key[option], value=params[param][option])
+                        if params[param][option]:
+                            selected_options.append(option)
+                    else:
+                        params[param][option] = st.checkbox(option, value=params[param][option])
+                        if params[param][option]:
+                            selected_options.append(option)
+                        if option == "Male":
+                            st.checkbox("Non-Binary")
                 selected_params[param] = selected_options
 
         # Initialize the filtered DataFrame to include all data initially
@@ -428,10 +438,10 @@ class SomunicateApp:
         # Collect the IDs from the filtered DataFrame
         self.user_group_ids = filtered_data['Group ID'].tolist()
 
-        # ########### DEBUG #############
-        # with st.expander("DEBUG: User Group IDs: "):
-        #     # Display the selected group IDs
-        #     st.write("User Group IDs:", self.user_group_ids)
+        ########### DEBUG #############
+        with st.expander("DEBUG: User Group IDs: "):
+            # Display the selected group IDs
+            st.write("User Group IDs:", self.user_group_ids)
 
         return self.user_group_ids
 
