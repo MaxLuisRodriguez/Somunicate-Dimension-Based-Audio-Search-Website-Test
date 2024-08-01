@@ -549,16 +549,16 @@ class SomunicateApp:
         col1, spacer, col2 = st.columns([2, 1, 2])  # Adjust the ratio as needed
 
         audio_closeness_display = {
-            1 : "(1st Closest)",
-            2 : "(2nd Closest)",
-            3 : "(3rd Closest)",
-            4 : "(4th Closest)",
-            5 : "(5th Closest)",
-            6 : "(6th Closest)",
-            7 : "(7th Closest)",
-            8 : "(8th Closest)",
-            9 : "(9th Closest)",
-            10 : "(10th Closest)"
+            1 : "1st Closest",
+            2 : "2nd Closest",
+            3 : "3rd Closest",
+            4 : "4th Closest",
+            5 : "5th Closest",
+            6 : "6th Closest",
+            7 : "7th Closest",
+            8 : "8th Closest",
+            9 : "9th Closest",
+            10 : "10th Closest"
         }
 
         # Initialize Euclidean_Display_Check
@@ -574,9 +574,9 @@ class SomunicateApp:
             with col2:
                 Euclidean_Display_Check = st.checkbox("Display Euclidean Sounds?")
                 if Euclidean_Display_Check:
-                    # with st.expander("See Advanced Euclidean"):
-                        # st.write("Top Audio Matches Based on Euclidean Distance:")
-                        # st.write(closest_sounds_euclidean)
+                    with st.expander("See Advanced Euclidean"):
+                        st.write("Top Audio Matches Based on Euclidean Distance:")
+                        st.write(closest_sounds_euclidean)
                     if len(closest_sounds_euclidean) < top_n: 
                         st.warning(f"Cannot Display {top_n - len(closest_sounds_euclidean)} Additional Sound(s) With Current Weights")
             
@@ -586,9 +586,9 @@ class SomunicateApp:
             #### MAHALANOBIS ####
 
             with col1:
-                # with st.expander("See Advanced Mahalanobis"):
-                    # st.write("Top Audio Matches Based on Mahalanobis Distance:")
-                    # st.write(closest_sounds_mahalanobis)
+                with st.expander("See Advanced Mahalanobis"):
+                    st.write("Top Audio Matches Based on Mahalanobis Distance:")
+                    st.write(closest_sounds_mahalanobis)
                 if len(closest_sounds_mahalanobis) < top_n: 
                     st.warning(f"Cannot Display {top_n - len(closest_sounds_mahalanobis)} Additional Sound(s) With Current Weights")
 
