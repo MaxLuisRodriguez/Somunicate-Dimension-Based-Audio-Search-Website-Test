@@ -574,9 +574,9 @@ class SomunicateApp:
             with col2:
                 Euclidean_Display_Check = st.checkbox("Display Euclidean Sounds?")
                 if Euclidean_Display_Check:
-                    with st.expander("See Advanced Euclidean"):
-                        st.write("Top Audio Matches Based on Euclidean Distance:")
-                        st.write(closest_sounds_euclidean)
+                    # with st.expander("See Advanced Euclidean"):
+                        # st.write("Top Audio Matches Based on Euclidean Distance:")
+                        # st.write(closest_sounds_euclidean)
                     if len(closest_sounds_euclidean) < top_n: 
                         st.warning(f"Cannot Display {top_n - len(closest_sounds_euclidean)} Additional Sound(s) With Current Weights")
             
@@ -586,9 +586,9 @@ class SomunicateApp:
             #### MAHALANOBIS ####
 
             with col1:
-                with st.expander("See Advanced Mahalanobis"):
-                    st.write("Top Audio Matches Based on Mahalanobis Distance:")
-                    st.write(closest_sounds_mahalanobis)
+                # with st.expander("See Advanced Mahalanobis"):
+                    # st.write("Top Audio Matches Based on Mahalanobis Distance:")
+                    # st.write(closest_sounds_mahalanobis)
                 if len(closest_sounds_mahalanobis) < top_n: 
                     st.warning(f"Cannot Display {top_n - len(closest_sounds_mahalanobis)} Additional Sound(s) With Current Weights")
 
